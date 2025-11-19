@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerReset : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class PlayerReset : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ResetPlayer(other.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else
         {
