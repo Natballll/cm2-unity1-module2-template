@@ -31,6 +31,13 @@ public class MouseShoot : MonoBehaviour
                 if (hit.collider.GetComponent<IDamagable>() != null)
                 {
                     hit.collider.GetComponent<IDamagable>().TakeDamage(damage);
+                    
+                    KnockbackReceiver kb = hit.collider.GetComponent<KnockbackReceiver>();
+                    if (kb != null)
+                    {
+                        Vector3 dir = hit.point - rayOrigin; // direction from gun to target
+                        kb.ApplyKnockback(dir, hit.point);
+                    } 
                 }
             }
         }

@@ -1,27 +1,31 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerReset : MonoBehaviour
 {
     public Transform spawnPoint;
+    public Transform objectPoint;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            ResetPlayer(other.gameObject);
         }
         else
         {
-            other.gameObject.SetActive(false);
+            ResetObject(other.gameObject);
         }
     }
 
     public void ResetPlayer(GameObject other)
     {
         other.transform.position = spawnPoint.position;
+    }
+
+    public void ResetObject(GameObject other)
+    {
+        other.transform.position = objectPoint.position;
     }
 }
