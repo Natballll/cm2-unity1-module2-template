@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc95538b085504c02a8743f3828f7b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10000000
+  health: 100
   damageSound: {fileID: 8300000, guid: 42027ccef98bdcd4fb7a9fb8a09e9cdd, type: 3}
   deathSound: {fileID: 8300000, guid: 42027ccef98bdcd4fb7a9fb8a09e9cdd, type: 3}
 --- !u!82 &530931732
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 20
   damage: 10
-  fireSoundEffects: {fileID: 8300000, guid: 4e604392e476c794bb1e991e9c18e4cc, type: 3}
+  fireSoundEffects: {fileID: 0}
 --- !u!82 &633570551
 AudioSource:
   m_ObjectHideFlags: 0
